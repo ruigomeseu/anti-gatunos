@@ -6,7 +6,9 @@
 <div class="container">
     @if(Session::has('message'))
     <div class="alert">
-        {{ Session::get('message') }}
+        <div class="alert alert-success">
+            <p>{{ Session::get('message') }}</p>
+        </div>
     </div>
     @endif
     @if($errors->has())
