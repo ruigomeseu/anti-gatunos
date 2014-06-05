@@ -24,7 +24,7 @@ body {
     position: absolute;
     content: " ";
     width: 3px;
-    background-color: #eeeeee;
+    background-color: #bebebe;
     left: 50%;
     margin-left: -1.5px;
 }
@@ -100,7 +100,7 @@ body {
     top: 16px;
     left: 50%;
     margin-left: -25px;
-    background-color: #999999;
+    background-color: #801e20;
     z-index: 100;
     border-top-right-radius: 50%;
     border-top-left-radius: 50%;
