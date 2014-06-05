@@ -41,14 +41,34 @@ class OccurrencesController extends \BaseController {
         $validation = Occurrence::validate(Input::all());
         if($validation->passes()) {
 
+
             $occurrence = new Occurrence();
+
+            if(strlen(Input::get('exact_address')) > 0) {
+                try {
+                    $geocode = Geocoder::geocode(Input::get('exact_address'));
+
+                } catch (\Exception $e) {
+                    return Redirect::route('addOccurrence')
+                        ->withErrors($e->getMessage())
+                        ->withInput();
+                }
+
+                $occurrence->latitude = $geocode->getLatitude();
+                $occurrence->longitude = $geocode->getLongitude();
+                $occurrence->exact_address = Input::get('exact_address');
+            }
+
             $occurrence->user_id = Auth::user()->id;
             $occurrence->location = Input::get('location');
             $occurrence->thief = Input::get('thief');
             $occurrence->sighting_time = date('Y-m-d H:i:s', strtotime(Input::get('sighting_time')));
             $occurrence->additional_information = Input::get('additional_information');
             $occurrence->anonymous = Input::get('anonymous');
+
+
             $occurrence->save();
+
             return Redirect::route('home')
                 ->with('message', 'Ocorrência registada!');
 

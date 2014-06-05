@@ -5,7 +5,8 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"facebook/php-sdk": "dev-master"
+		"facebook/php-sdk": "dev-master",
+        "toin0u/geocoder-laravel": "@stable"
 	},
     "require-dev": {
         "way/generators": "2.*"

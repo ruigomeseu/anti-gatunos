@@ -32,7 +32,15 @@
     <script src="{{ URL::asset('vendor/pickadate/legacy.js') }}"></script>
 
     <link rel="shortcut icon" type="image/png" href="favicon.png"/>
-
+    <style>
+        #map-canvas {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            height:400px;
+        }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 </head>
 
 <body>

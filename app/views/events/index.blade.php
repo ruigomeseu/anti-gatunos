@@ -1,7 +1,36 @@
 @extends('template.main')
 
 @section('content')
+<script>
+    function initialize() {
+        var feupCoords = new google.maps.LatLng(41.177875,-8.597916);
+        var mapOptions = {
+            zoom: 15,
+            center: feupCoords
+        }
+        var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
+
+        @foreach($occurrences as $occurrence)
+            @if(!empty($occurrence->latitude) && !empty($occurrence->longitude))
+                var markerlabel{{ $occurrence->id }}= new google.maps.InfoWindow({
+                    content: "<p>{{ $occurrence->thief }}</p><p>{{ $occurrence->additional_information }}</p>"
+                });
+                var marker{{$occurrence->id}} = new google.maps.Marker({
+                    position: new google.maps.LatLng({{ $occurrence->latitude }}, {{ $occurrence->longitude }} ),
+                    map: map,
+                    title: "{ $occurrence->thief }}"
+                });
+
+                google.maps.event.addListener(marker{{$occurrence->id}}, "click", function (e) { markerlabel{{ $occurrence->id }}.open(map, this); });
+            @endif
+        @endforeach
+
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
 
 <div class="container">
     @if(Session::has('message'))
@@ -18,6 +47,13 @@
     </div>
     @endforeach
     @endif
+
+    <div class="row">
+        <div class="col-md-12">
+            <div id="map-canvas"></div>
+        </div>
+    </div>
+
     <?php $counter = 0; ?>
     @foreach($occurrences as $occurrence)
     <ul class="timeline">
