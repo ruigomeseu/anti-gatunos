@@ -54,9 +54,9 @@
                 <li class="active"><a href="{{ URL::route('home') }}">Home</a></li>
                 <li><a href="{{ URL::route('addOccurrence') }}">Registar Ocorrência</a></li>
                 @if(!Auth::check())
-                <li><a href="{{ URL::route('login/fb') }}">Login</a></li>
+                <li><a href="{{ URL::to('login/fb') }}">Login</a></li>
                 @else
-                <li><a href="{{ URL::route('logout') }}">Logout</a></li>
+                <li><a href="{{ URL::to('logout') }}">Logout</a></li>
                 @endif
             </ul>
         </div>
