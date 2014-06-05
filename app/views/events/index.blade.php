@@ -5,7 +5,7 @@
     function initialize() {
         var feupCoords = new google.maps.LatLng(41.177875,-8.597916);
         var mapOptions = {
-            zoom: 15,
+            zoom: 14    ,
             center: feupCoords
         }
         var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
