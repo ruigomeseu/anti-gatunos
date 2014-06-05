@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Anti-Gatuno - {{ $title }}</title>
+    <title>Anti-Gatunos - {{ $title }}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel="stylesheet">
@@ -31,6 +31,8 @@
     <script src="{{ URL::asset('vendor/pickadate/picker.date.js') }}"></script>
     <script src="{{ URL::asset('vendor/pickadate/picker.time.js') }}"></script>
     <script src="{{ URL::asset('vendor/pickadate/legacy.js') }}"></script>
+
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
 
 </head>
 
