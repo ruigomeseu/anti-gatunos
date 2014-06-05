@@ -52,7 +52,7 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="{{ URL::route('home') }}">Home</a></li>
-                <li><a href="{{ URL::route('addOccurrence') }}">Registar Ocorrência</a></li>
+                <li><a href="{{ URL::route('addOccurrence') }}">Adicionar Ocorrência</a></li>
                 @if(!Auth::check())
                 <li><a href="{{ URL::to('login/fb') }}">Login</a></li>
                 @else
