@@ -24,7 +24,7 @@
 
         <p>{{ Form::text('location', Input::old('location'), array("placeholder" => "Localização Aproximada", "class" => "form-control")) }}</p>
 
-        <p>{{ Form::text('exact_address', Input::old('exact_address'), array("placeholder" => "Morada Exacta (não obrigatório)", "class" => "form-control")) }}</p>
+        <p>{{ Form::text('exact_address', Input::old('exact_address'), array("placeholder" => "Morada Exacta, como aparece no Google Maps (não obrigatório)", "class" => "form-control")) }}</p>
 
         <p>{{ Form::text('sighting_time', '', array("placeholder" => "Hora", "class" => "form-control timepicker")) }}
 
