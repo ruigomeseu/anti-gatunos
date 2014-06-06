@@ -26,6 +26,11 @@
     <link rel="stylesheet" href="{{ URL::asset('vendor/pickadate/themes/default.date.css') }}" id="theme_date">
     <link rel="stylesheet" href="{{ URL::asset('vendor/pickadate/themes/default.time.css') }}" id="theme_time">
 
+    <link href="{{ URL::asset('apple-touch-icon.png') }}" rel="apple-touch-icon" />
+    <link href="{{ URL::asset('apple-touch-icon-76x76.png') }}" rel="apple-touch-icon" sizes="76x76" />
+    <link href="{{ URL::asset('apple-touch-icon-120x120.png') }}" rel="apple-touch-icon" sizes="120x120" />
+    <link href="{{ URL::asset('apple-touch-icon-152x152.png') }}" rel="apple-touch-icon" sizes="152x152" />
+
     <script src="{{ URL::asset('vendor/pickadate/picker.js') }}"></script>
     <script src="{{ URL::asset('vendor/pickadate/picker.date.js') }}"></script>
     <script src="{{ URL::asset('vendor/pickadate/picker.time.js') }}"></script>
