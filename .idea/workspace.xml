@@ -78,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/events/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.35928145" vertical-offset="0" max-vertical-offset="1485">
-              <caret line="16" column="109" selection-start-line="16" selection-start-column="109" selection-end-line="16" selection-end-column="109" />
+              <caret line="16" column="143" selection-start-line="16" selection-start-column="143" selection-end-line="16" selection-end-column="143" />
               <folding />
             </state>
           </provider>
@@ -795,7 +795,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/events/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35928145" vertical-offset="0" max-vertical-offset="1485">
-          <caret line="16" column="109" selection-start-line="16" selection-start-column="109" selection-end-line="16" selection-end-column="109" />
+          <caret line="16" column="143" selection-start-line="16" selection-start-column="143" selection-end-line="16" selection-end-column="143" />
           <folding />
         </state>
       </provider>
