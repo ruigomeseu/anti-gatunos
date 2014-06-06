@@ -49,6 +49,19 @@
     @endif
 
     <div class="row">
+        <div class="col-md-6">
+            <a href="tel:+351225574900" class="btn btn-success btn-lg btn-block">Ligar Esquadra Bom Pastor</a>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <a href="sms:+351912233377" class="btn btn-success btn-lg btn-block">SMS Seguranças FEUP</a>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row">
         <div class="col-md-12">
             <div id="map-canvas"></div>
         </div>
