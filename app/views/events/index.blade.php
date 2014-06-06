@@ -14,7 +14,7 @@
         @foreach($occurrences as $occurrence)
             @if(!empty($occurrence->latitude) && !empty($occurrence->longitude))
                 var markerlabel{{ $occurrence->id }}= new google.maps.InfoWindow({
-                    content: "<p>{{ $occurrence->thief }}</p><p>{{ $occurrence->additional_information }}</p>"
+                    content: "<p>{{ $occurrence->thief }}</p><p>{{ nl2br($occurrence->additional_information) }}</p>"
                 });
                 var marker{{$occurrence->id}} = new google.maps.Marker({
                     position: new google.maps.LatLng({{ $occurrence->latitude }}, {{ $occurrence->longitude }} ),
