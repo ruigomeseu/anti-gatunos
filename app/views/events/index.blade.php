@@ -52,9 +52,18 @@
         <div class="col-md-6">
             <a href="tel:+351225574900" class="btn btn-success btn-lg btn-block">Ligar Esquadra Bom Pastor</a>
         </div>
-            <div class="col-md-6">
-                <a href="sms:+351912233377" class="btn btn-success btn-lg btn-block">SMS Seguranças FEUP</a>
-            </div>
+        <div class="col-md-6">
+            <a href="sms:+351912233377" class="btn btn-success btn-lg btn-block">SMS Seguranças FEUP</a>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-6">
+            <a href="tel:+351229059580" class="btn btn-success btn-lg btn-block">Ligar Esquadra S. Mamede Infesta</a>
+        </div>
+        <div class="col-md-6">
+            <a href="sms:+351935664771" class="btn btn-success btn-lg btn-block">SMS Vigilância ISCAP</a>
+        </div>
     </div>
 
     <br />
