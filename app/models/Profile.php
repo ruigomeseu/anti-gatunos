@@ -1,6 +1,6 @@
 <?php
 
-class Profile extends BaseModel {
+class Profile extends Eloquent {
 
     public function user()
     {

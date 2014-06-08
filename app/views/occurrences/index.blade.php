@@ -19,7 +19,7 @@
                 var marker{{$occurrence->id}} = new google.maps.Marker({
                     position: new google.maps.LatLng({{ $occurrence->latitude }}, {{ $occurrence->longitude }} ),
                     map: map,
-                    title: "{ $occurrence->thief }}"
+                    title: "{{ $occurrence->thief }}"
                 });
 
                 google.maps.event.addListener(marker{{$occurrence->id}}, "click", function (e) { markerlabel{{ $occurrence->id }}.open(map, this); });
