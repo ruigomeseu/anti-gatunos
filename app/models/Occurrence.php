@@ -1,12 +1,8 @@
 <?php
 
-class Occurrence extends BaseModel {
+class Occurrence extends Eloquent {
 
-    public static $rules = array(
-        'location' => 'required',
-        'sighting_time' => 'required',
-        'thief' => 'required',
-    );
+    protected $fillable = array('user_id', 'location', 'thief', 'sighting_time', 'anonymous', 'additional_information', 'exact_address');
 
     public function user()
     {
