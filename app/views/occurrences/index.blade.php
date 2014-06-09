@@ -6,7 +6,7 @@
     function initialize() {
         var feupCoords = new google.maps.LatLng(41.177875,-8.597916);
         var mapOptions = {
-            zoom: 14    ,
+            zoom: 14,
             center: feupCoords
         }
 
@@ -28,11 +28,9 @@
 
             google.maps.event.addListener(marker, "click", function (e) { label.open(map, this); });
         }
-
     }
 
     google.maps.event.addDomListener(window, 'load', initialize);
-
 </script>
 
 <div class="container">
