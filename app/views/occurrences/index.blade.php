@@ -2,29 +2,32 @@
 
 @section('content')
 <script>
+    var occurrences = {{ $geoOccurrencesJson }};
     function initialize() {
         var feupCoords = new google.maps.LatLng(41.177875,-8.597916);
         var mapOptions = {
             zoom: 14    ,
             center: feupCoords
         }
+
+        var occurrences = {{ $geoOccurrencesJson }};
+
         var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
+        for (occurrence in occurrences) {
+            var label = new google.maps.InfoWindow({
+                content: occurrences[occurrence].additional_information
+            });
 
-        @foreach($occurrences as $occurrence)
-            @if(!empty($occurrence->latitude) && !empty($occurrence->longitude))
-                var markerlabel{{ $occurrence->id }}= new google.maps.InfoWindow({
-                    content: "<p>{{ $occurrence->thief }}</p><p>{{ trim(preg_replace('/\s+/', ' ', nl2br($occurrence->additional_information))) }}</p>"
-                });
-                var marker{{$occurrence->id}} = new google.maps.Marker({
-                    position: new google.maps.LatLng({{ $occurrence->latitude }}, {{ $occurrence->longitude }} ),
-                    map: map,
-                    title: "{{ $occurrence->thief }}"
-                });
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(occurrences[occurrence].latitude, occurrences[occurrence].longitude),
+                title: occurrences[occurrence].thief
+            });
 
-                google.maps.event.addListener(marker{{$occurrence->id}}, "click", function (e) { markerlabel{{ $occurrence->id }}.open(map, this); });
-            @endif
-        @endforeach
+            marker.setMap(map);
+
+            google.maps.event.addListener(marker, "click", function (e) { label.open(map, this); });
+        }
 
     }
 

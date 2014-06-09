@@ -20,10 +20,16 @@ class OccurrencesController extends \BaseController {
 	public function index()
 	{
         $occurrences = Occurrence::orderBy('sighting_time', 'DESC')->with('user')->paginate(20);
+
+        $geoReferencedOccurrences = array_filter(Occurrence::all()->toArray(), function($occurrence) {
+            return !empty($occurrence['exact_address']);
+        });
+
         return View::make('occurrences.index')->with(
             array(
                 'title' => 'Todas as Ocorrências',
                 'occurrences' => $occurrences,
+                'geoOccurrencesJson' => json_encode($geoReferencedOccurrences),
             ));
 	}
 
